@@ -17,4 +17,31 @@ console.log(red_squares);
 let red = document.getElementsByClassName('red'); //prende tutti gli elementi con la classe red
 console.log(red);
 
+//5 - classList, className, style: non servono per recuperare un elemento del DOM, ma sono delle proprietà degli elementi recuperati con i metodi indicati nei punti da 1 a 4
+//5.1 classList
+let class_list = document.getElementById('classlist');
+console.log(class_list.classList); //ci restituisce con una determinata struttura dati (per ora vedetelo come un elenco) le classi applicate al tag
 
+// con classList vanno a braccetto i metodi
+// 1 - add('nome_classe'): aggiungo una classe al tag;
+// 2 - remove('nome_classe'): rimuovo una classe al tag;
+// 3 - toggle('nome_classe'): aggiungo o rimuovo una classe al tag a seconda se presente o meno
+class_list.classList.add('fs-5');
+
+
+// 5.2 className
+let class_name = document.getElementById('classname');
+console.log(class_name.className); //ci restituisce sotto forma di stringa le classi applicate al tag
+
+// con className possiamo sovrascrivere o aggiungere delle classi
+class_name.className = 'fw-bold'; //così sovrascrivo le classi già esistenti (nell'esempio erano text-center e text-warning)
+class_name.className += ' text-success fs-2'; //così aggiungo le classi a quelle già esistenti.
+// 5.3 style
+
+let elem = document.getElementById('style');
+console.log(elem.style); //recupera l'attributo style del tag con le relative proprietà. Se non è presente tale attributo, non viene preso
+
+elem.style.backgroundColor = 'silver'; //aggiungo uno stile attravero l'attributo style. Nell'inspector vedrò quindi questo attributo comparire nel tag di riferimento;
+elem.style.color = 'goldenrod';
+
+elem.style.fontSize = ''; //così rimuovo la proprietà indicata

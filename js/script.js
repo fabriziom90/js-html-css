@@ -45,3 +45,17 @@ elem.style.backgroundColor = 'silver'; //aggiungo uno stile attravero l'attribut
 elem.style.color = 'goldenrod';
 
 elem.style.fontSize = ''; //così rimuovo la proprietà indicata
+
+//addEventListener: aggiunge un evento ad un tag.
+const button = document.getElementById('change-color'); //recupero il pulsante dal dom
+console.log(button);
+
+button.addEventListener('click', function () { //gli dico di rimanere in attesa/in ascolto di un evento click
+    let big_square = document.querySelector('.big-square'); //recupero il quadrato grande
+    // big_square.classList.remove('red'); //rimuovo la classe red
+    // big_square.classList.add('gold'); //aggiungo la classe gold
+
+    //aggiungo rimuovo la classe gold. Attenzione che la classe red, rimane sempre.
+    big_square.classList.toggle('gold');
+});
+

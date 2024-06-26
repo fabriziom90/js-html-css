@@ -11,6 +11,13 @@
     margin: 10px;
 }
 
+.big-square {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
 .content {
     height: 150px;
     border: 1px solid black;
@@ -39,4 +46,10 @@
 
 .text-lightblue {
     color: lightblue
+}
+
+.form-price {
+    background-color: rgb(48, 12, 12);
+    color: #fff;
+    padding: 20px;
 }

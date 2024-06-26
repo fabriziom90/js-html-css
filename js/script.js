@@ -59,3 +59,13 @@ button.addEventListener('click', function () { //gli dico di rimanere in attesa/
     big_square.classList.toggle('gold');
 });
 
+// -------------------------LIVE CODING: FORM CALCOLO PREZZO--------------------------------------
+//Recupero il pulsante per il calcolo del prezzo
+//il value è l'attributo che mi serve per recuperare il valore di un campo input di qualsiasi tipo
+const btn = document.getElementById('calculate-price');
+btn.addEventListener('click', function () {
+    let name = document.getElementById('name').value;
+
+
+    console.log(name);
+});
